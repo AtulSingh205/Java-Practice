@@ -2211,5 +2211,42 @@
 //     }
 // }
 
-// ------------------------
+// ------------------------min max------------------
+
+// public class Sort{
+//     public static void main(String[] args) {
+//         int [] arr = {64,25,12,22,11};
+//         int n = arr.length;
+//         for(int i = 0;i<n;i++){
+//             int mindx=i;
+//             for(int j = i+1;j<n;j++){
+//                 if(arr[j]<arr[mindx]){
+//                     mindx = j;
+//                 }
+//             }
+//             int  temp = arr[i];
+//             arr[i]=arr[mindx] ;
+//             arr[mindx] = temp ;
+//         }
+//         for (int i : arr) {
+//             System.out.print(i+" ");
+//         }
+//     }
+// }
+
+// --------------------------min-max-------------------
+
+// public class React {
+//     public static void main(String[] args){
+//         int[] arr = { 23, 25, 28, 29, 7 };
+//         for (int i = 0; i < arr.length; i++){
+//             for (int j = 0; j < arr.length; j++){
+//                  int temp = arr[i];
+//                   arr[i] = arr[i+1];
+//                   arr[i+1] = arr[i];
+//                 }
+//             }
+//         }   
+//     }
+// } 
 
