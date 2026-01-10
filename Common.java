@@ -2234,19 +2234,59 @@
 //     }
 // }
 
-// --------------------------min-max-------------------
+// ----------------------selection sort----------------
 
-// public class React {
-//     public static void main(String[] args){
-//         int[] arr = { 23, 25, 28, 29, 7 };
-//         for (int i = 0; i < arr.length; i++){
-//             for (int j = 0; j < arr.length; j++){
-//                  int temp = arr[i];
-//                   arr[i] = arr[i+1];
-//                   arr[i+1] = arr[i];
-//                 }
+// public class Practice{
+//  public static void main(String[] args) {
+//     int[] arr = {64,25,12,22,11};
+//     int n = arr.length;
+    
+//     for(int i = 0;i<n;i++){
+//         int mindx = i;
+//         for(int j = i;j<n;j++){
+//             if(arr[j]<arr[mindx]){
+//                    mindx = j;
 //             }
-//         }   
+//         }
+//         int temp = arr[i];
+//         arr[i] = arr[mindx];
+//         arr[mindx] = temp;
 //     }
-// } 
+//     for (int i : arr) {
+//         System.out.print(i+" ");
+//     }
+//  }
+// }
 
+// ---------------------- Sort common arr ----------------
+
+public class Common{
+    public static void main(String[] args) {
+        int[] a = {3,4,2,2,4};
+        int[] b = {3,2,2,7};
+        int[] c = new int[a.length];
+        int idx = 0;
+
+        for(int i = 0;i<a.length;i++){
+
+            for(int j =0;j<b.length;j++){
+                if(a[i]==b[j]){
+                    c[idx]=a[i];
+                    idx++;
+                    break;
+                }
+            }
+        }
+          for (int k = 0;k<idx;k++){
+            for(int j = 0;j<idx-1;j++)
+                if(c[j]>c[j+1]){
+                    int temp = c[j];
+                    c[j]=c[j+1];
+                    c[j+1]=temp;
+                }
+            }
+       for(int i = 0;i<idx;i++){
+        System.out.print(c[i]);
+       }
+    }
+}
