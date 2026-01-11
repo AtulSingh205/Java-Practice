@@ -2260,33 +2260,87 @@
 
 // ---------------------- Sort common arr ----------------
 
-public class Common{
+// public class Common{
+//     public static void main(String[] args) {
+//         int[] a = {3,4,2,2,4};
+//         int[] b = {3,2,2,7};
+//         int[] c = new int[a.length];
+//         int idx = 0;
+
+//         for(int i = 0;i<a.length;i++){
+
+//             for(int j =0;j<b.length;j++){
+//                 if(a[i]==b[j]){
+//                     c[idx]=a[i];
+//                     idx++;
+//                     break;
+//                 }
+//             }
+//         }
+//           for (int k = 0;k<idx;k++){
+//             for(int j = 0;j<idx-1;j++)
+//                 if(c[j]>c[j+1]){
+//                     int temp = c[j];
+//                     c[j]=c[j+1];
+//                     c[j+1]=temp;
+//                 }
+//             }
+//        for(int i = 0;i<idx;i++){
+//         System.out.print(c[i]);
+//        }
+//     }
+// }
+
+// ------------------------find lagest first selection sort-----------------------
+
+// public class Largest{
+    
+//    public static void main(String[] args) {
+//     int [] arr = {8,4,1,9,-3,6,5};
+
+//      for(int i = arr.length-1;i>0;i--){
+//         int maxidx = i;
+//         for(int j = i-1;j>=0;j--){
+//             if(arr[j]>arr[maxidx]){
+
+//                 maxidx=j;
+
+//             }
+//         }
+//         int temp = arr[i];
+//          arr[i] = arr[maxidx];
+//          arr[maxidx] = temp;
+//     }
+//     for (int i : arr) {
+//         System.out.print(i+" ");
+//     }
+//    }
+
+// }
+
+// ----------------------sum of arr == target array------------------
+
+public class Target{
     public static void main(String[] args) {
-        int[] a = {3,4,2,2,4};
-        int[] b = {3,2,2,7};
-        int[] c = new int[a.length];
-        int idx = 0;
-
-        for(int i = 0;i<a.length;i++){
-
-            for(int j =0;j<b.length;j++){
-                if(a[i]==b[j]){
-                    c[idx]=a[i];
-                    idx++;
-                    break;
-                }
+        int[]  arr = {0,2,3,4,5,6,7,8,10};
+        int i = 0 , j = arr.length-1;
+        int target = 9;
+        boolean check = false;
+        while(i<j){
+            if(arr[i]+arr[j] == target) {
+                System.out.println("find a element");
+                check = true;
+                break;
+            }
+            else if(arr[i]+arr[j]>target){
+                j--;
+            }
+            else if(arr[j]+arr[i]<target){
+                i++;
             }
         }
-          for (int k = 0;k<idx;k++){
-            for(int j = 0;j<idx-1;j++)
-                if(c[j]>c[j+1]){
-                    int temp = c[j];
-                    c[j]=c[j+1];
-                    c[j+1]=temp;
-                }
-            }
-       for(int i = 0;i<idx;i++){
-        System.out.print(c[i]);
-       }
+        if(!check) System.out.println("Not Found element !");
+      
     }
 }
+
