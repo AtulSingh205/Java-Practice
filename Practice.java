@@ -2320,27 +2320,55 @@
 
 // ----------------------sum of arr == target array------------------
 
-public class Target{
-    public static void main(String[] args) {
-        int[]  arr = {0,2,3,4,5,6,7,8,10};
-        int i = 0 , j = arr.length-1;
-        int target = 9;
-        boolean check = false;
-        while(i<j){
-            if(arr[i]+arr[j] == target) {
-                System.out.println("find a element");
-                check = true;
-                break;
-            }
-            else if(arr[i]+arr[j]>target){
-                j--;
-            }
-            else if(arr[j]+arr[i]<target){
-                i++;
-            }
-        }
-        if(!check) System.out.println("Not Found element !");
+// public class Target{
+//     public static void main(String[] args) {
+//         int[]  arr = {0,2,3,4,5,6,7,8,10};
+//         int i = 0 , j = arr.length-1;
+//         int target = 9;
+//         boolean check = false;
+//         while(i<j){
+//             if(arr[i]+arr[j] == target) {
+//                 System.out.println("find a element");
+//                 check = true;
+//                 break;
+//             }
+//             else if(arr[i]+arr[j]>target){
+//                 j--;
+//             }
+//             else if(arr[j]+arr[i]<target){
+//                 i++;
+//             }
+//         }
+//         if(!check) System.out.println("Not Found element !");
       
-    }
-}
+//     }
+// }
 
+// -------------------------find a two arr of common element--------------
+
+public class Practice{
+  public static void main(String[] args) {
+    int []  arr = {1,1,1,2,3,4,5,5};
+    int []  brr = {1,1,2,4,4,6,8};
+    int []  crr = new  int [arr.length];
+    int idx = 0;
+    int i =0, j =0;
+    while(i<arr.length && j<brr.length){
+        if(arr[i]==brr[j]){
+           crr[idx] = arr[i];
+           idx++;
+           i++;
+           j++;
+        } 
+        else if(arr[i]>brr[j]){
+            j++;
+        }
+        else if(brr[j]>arr[i]){
+            i++;
+        }
+    }
+    for (int k =0;k<idx;k++){
+        System.out.print(crr[k]+" ");
+    }
+  }
+}
