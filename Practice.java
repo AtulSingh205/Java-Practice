@@ -2346,29 +2346,59 @@
 
 // -------------------------find a two arr of common element--------------
 
-public class Practice{
-  public static void main(String[] args) {
-    int []  arr = {1,1,1,2,3,4,5,5};
-    int []  brr = {1,1,2,4,4,6,8};
-    int []  crr = new  int [arr.length];
-    int idx = 0;
-    int i =0, j =0;
-    while(i<arr.length && j<brr.length){
-        if(arr[i]==brr[j]){
-           crr[idx] = arr[i];
-           idx++;
-           i++;
-           j++;
-        } 
-        else if(arr[i]>brr[j]){
-            j++;
-        }
-        else if(brr[j]>arr[i]){
-            i++;
-        }
-    }
-    for (int k =0;k<idx;k++){
-        System.out.print(crr[k]+" ");
-    }
-  }
-}
+// public class Practice{
+//   public static void main(String[] args) {
+//     int []  arr = {1,1,1,2,3,4,5,5};
+//     int []  brr = {1,1,2,4,4,6,8};
+//     int []  crr = new  int [arr.length];
+//     int idx = 0;
+//     int i =0, j =0;
+//     while(i<arr.length && j<brr.length){
+//         if(arr[i]==brr[j]){
+//            crr[idx] = arr[i];
+//            idx++;
+//            i++;
+//            j++;
+//         } 
+//         else if(arr[i]>brr[j]){
+//             j++;
+//         }
+//         else if(brr[j]>arr[i]){
+//             i++;
+//         }
+//     }
+//     for (int k =0;k<idx;k++){
+//         System.out.print(crr[k]+" ");
+//     }
+//   }
+// }
+
+// ---------------------union of two arr -----------------
+
+// import java.util.ArrayList;
+
+// public class Practice {
+//    public static void main(String[] args) {
+//     ArrayList<Integer> crr = new ArrayList<>();
+//     int [] arr = {1,2,3,4,5};
+//     int [] brr = {1,2,3,6,7};
+    
+//     int i = 0 ,j = 0;
+//     while (i<arr.length) {
+//         if(arr[i]==brr[j]){
+//             crr.add(arr[i]);
+//             i++;
+//             j++;
+//         }
+//         else if(arr[i]<arr[j]){
+//             crr.add(arr[j]);
+//             i++;
+//             j++;
+//         }
+//     }
+//     for (int k : crr) {
+//         System.out.print(k+" ");
+//     }
+
+//    }
+// }
