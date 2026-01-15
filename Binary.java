@@ -2426,23 +2426,41 @@
 //     }
 // }
 
-public class start{
-    public static void main(String[] args) {
-        int [] arr = {7,3,4,7,8,1};
-        for(int i = 0;i<arr.length-1;i++){
-            int mindx = i;
-            for(int j = i;j<arr.length-1;j++){
-                if(arr[j]<arr[mindx]){
-                    mindx = j;
-                }
-            }
-            int temp = arr[i];
-            arr[i] = arr[mindx];
-            arr[mindx] = temp ;
-        }
+// public class start{
+//     public static void main(String[] args) {
+//         int [] arr = {7,3,4,7,8,1};
+//         for(int i = 0;i<arr.length-1;i++){
+//             int mindx = i;
+//             for(int j = i;j<arr.length-1;j++){
+//                 if(arr[j]<arr[mindx]){
+//                     mindx = j;
+//                 }
+//             }
+//             int temp = arr[i];
+//             arr[i] = arr[mindx];
+//             arr[mindx] = temp ;
+//         }
 
-        for (int i : arr) {
-            System.out.print(i+" ");
+//         for (int i : arr) {
+//             System.out.print(i+" ");
+//         }
+//     }
+// }
+
+// ---------------------Binary Search tree------------------
+
+public class Binary{
+    public static void main(String[] args) {
+        int [] arr = {2,4,12,20,28};
+         int target = 28;
+        int n = arr.length;
+        int low = 0;
+        int high = n-1;
+        while(low<=high){
+            int mid = (low+high)/2;
+            if(arr[mid]==target) {System.out.print("we Found tat elment in aray"); break;}
+            else if(arr[mid]>target) high = mid-1;
+            else if(arr[mid]<target) low  = mid+1;
         }
     }
 }
