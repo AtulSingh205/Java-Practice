@@ -2462,6 +2462,7 @@ public class Binary{
             else if(arr[mid]>target) high = mid-1;
             else if(arr[mid]<target) low  = mid+1;
         }
+        
     }
 }
 
