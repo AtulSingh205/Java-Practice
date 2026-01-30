@@ -12,3 +12,4 @@ public class factorial {
         System.out.println("Factorial numb is "+factorial(5));
     }
 }
+
