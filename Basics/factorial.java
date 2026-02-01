@@ -7,10 +7,12 @@ public class factorial {
                 return n * factorial(n-1);
              }
       }
-
     public static void main(String[] args) {
         System.out.println("Factorial numb is "+factorial(5));
     }
 }
+
+
+
 
 
